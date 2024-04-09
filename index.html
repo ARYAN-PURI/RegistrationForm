@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logo.png">
+    <link rel="stylesheet" href="index.css">
+    <title>Registration Form</title>
+</head>
+<body>
+    <div id="head"><img src="./logo.png"><h2>Registration Form</h2></div>
+    <div class="box">
+        <img src="./back.png" class="back">
+        <form method="POST" action="http://localhost:5000/storedata" id="frm" onsubmit="replace()">
+            <div><label for="fname">Enter First Name:</label><input type="text" placeholder="First Name" required name="fname" id="fname"></div>
+            <div><label for="lname">Enter Last Name:</label><input type="text" placeholder="Last Name" name="lname" id="lname"></div>
+            <div><label for="dob">Enter D.O.B.:</label><input type="date" name="dob" id="dob" required></div>
+            <div>
+                <label>Select Your Gender:</label>
+                <div><input type="radio" name="gender" required value="M" id="M"><label for="M">Male.</label></div>
+                <div><input type="radio" name="gender" required value="F" id="F"><label for="F">Female.</label></div>
+                <div><input type="radio" name="gender" required value="O" id="O"><label for="O">Others.</label></div>
+            </div>
+            <div><label for="mobile">Enter Mobile No.:</label><input type="number" palceholder="Mobile No." name="mobile" id="mobile"><div id="numcheck">(Enter a Valid Mobile Number)</div></div>
+            <div>
+                <label for="profession">Select Your Profession:</label>
+                <select name="profession" id="profession">
+                    <option>Student</option>
+                    <option>Web Developer</option>
+                    <option>Software Engineer</option>
+                    <option>Data Scientist/Data Analytics</option>
+                    <option>AI/Ml Engineer</option>
+                </select>
+            </div>
+            <div>
+                <label >Select Your Fields of Interests:</label>
+                    <div><input type="checkbox" name="interests" value="gaming">Gaming</div>
+                    <div><input type="checkbox" name="interests" value="sports">Sports</div>
+                    <div><input type="checkbox" name="interests" value="dance">Dance</div>
+                    <div><input type="checkbox" name="interests" value="painting">Painting</div>
+                    <div><input type="checkbox" name="interests" value="tarveling">Traveling</div>
+            </div>
+            <div><label for="email">Enter E-mail:</label><input type="email" placeholder="E-mail" required name="email" id="email"></div>
+            <div><label for="pass">Enter Password:</label><input type="password" placeholder="Password" required name="pass" id="pass"></div>
+            <div><label for="cpass">Enter Confirm Password:</label><input type="text" placeholder="Confirm Password" required name="cpass" id="cpass"><div id="passcheck">(Confirm Password Should we same as actual Password)</div></div>
+            <div><input type="checkbox" name="agree" id="agree" required><label for="agree">I agree to share my data with the host</label></div>
+            <div id="butns"><button id="submit" class="btn">Submit</button><input type="reset" value="Reset" class="btn"></div>
+        </form>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
